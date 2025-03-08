@@ -3,32 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finance Passbook</title>
+    <title>📖 Finance Passbook</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
+    <div class="container">
         <h1>📖 Finance Passbook</h1>
-    </header>
 
-    <!-- Transaction Lookup Form -->
-    <section id="lookupSection">
-        <form id="userForm">
+        <!-- 🔍 Transaction Lookup Form -->
+        <div class="lookup-box">
             <label for="name">Enter Name:</label>
-            <input type="text" id="name" name="name" required placeholder="John Doe">
+            <input type="text" id="name" placeholder="Enter Name">
+            
+            <label for="account">Enter Account Number:</label>
+            <input type="text" id="account" placeholder="Enter Account Number">
 
-            <label for="accountNumber">Enter Account Number:</label>
-            <input type="number" id="accountNumber" name="accountNumber" required placeholder="123456">
+            <button onclick="fetchTransactions()">🔍 Fetch Transactions</button>
+        </div>
 
-            <button type="submit">🔍 Fetch Transactions</button>
-        </form>
-    </section>
-
-    <!-- Transaction Table -->
-    <section id="transactionSection" class="hidden">
+        <!-- 📑 Transaction History Table -->
         <h2>📑 Transaction History</h2>
-        <table>
+        <table id="transactions-table">
             <thead>
                 <tr>
                     <th>Date</th>
@@ -37,16 +32,16 @@
                     <th>Type</th>
                 </tr>
             </thead>
-            <tbody id="transactionBody">
+            <tbody id="transactions-body">
                 <tr>
                     <td colspan="4">No transactions found.</td>
                 </tr>
             </tbody>
         </table>
 
-        <!-- Print Button -->
-        <button id="printBtn">🖨️ Print Passbook</button>
-    </section>
+        <!-- 🖨️ Print Button -->
+        <button onclick="printPassbook()">🖨️ Print Passbook</button>
+    </div>
 
     <script type="module" src="script.js"></script>
 </body>

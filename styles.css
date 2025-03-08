@@ -1,91 +1,93 @@
-/* General Page Styling */
+/* 🎨 General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    text-align: center;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Form Styling */
-#userForm {
+/* 📦 Main Container */
+.container {
     background: white;
     padding: 20px;
-    display: inline-block;
     border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
 }
 
-input, button {
-    padding: 10px;
-    margin: 5px;
-    border: 1px solid #ccc;
+/* 🏷️ Headings */
+h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* 🔍 Lookup Box */
+.lookup-box {
+    background: #f8f9fa;
+    padding: 15px;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
+.lookup-box label {
+    display: block;
+    margin: 8px 0 5px;
+    font-weight: bold;
+}
+
+.lookup-box input {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 🔘 Buttons */
 button {
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-/* 🔥 Passbook-Style Transaction Table */
-#transactionSection {
-    margin-top: 20px;
-    display: block;
-}
-
+/* 📑 Transaction Table */
 table {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
     border-collapse: collapse;
-    background: white;
-    border: 2px solid black;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
 }
 
-th, td {
-    padding: 12px;
-    border: 1px solid black;
-    text-align: left;
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
 }
 
-/* Styling for table headers */
-th {
-    background: #007BFF;
+table th {
+    background-color: #007bff;
     color: white;
-    font-size: 16px;
 }
 
-/* Alternating row colors for better readability */
-tr:nth-child(even) {
+table tr:nth-child(even) {
     background-color: #f2f2f2;
-}
-
-/* 🔥 Credit (Green) & Debit (Red) Styling */
-.credit {
-    color: green;
-    font-weight: bold;
-}
-
-.debit {
-    color: red;
-    font-weight: bold;
-}
-
-/* Print Button */
-#printBtn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#printBtn:hover {
-    background: #218838;
 }
